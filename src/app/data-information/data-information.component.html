@@ -1,0 +1,32 @@
+<div class="container">
+  <div>
+    <h1 class="text-info ">Students List</h1>
+    <button class="btn btn-success" [routerLink]="['/form']"> Add</button>
+  </div>
+  <div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>FirstName</th>
+          <th>Surname</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students ">
+          <td>{{student.firstName}}</td>
+          <td>{{student.surName}}</td>
+          <td>{{student.age}}</td>
+          <td>
+            <i class="fa fa-trash hand action-icon-size" (click)="onDelete(student)"></i> |
+            <i class="fa fa-edit hand action-icon-size" (click)="onEdit(student.id)"></i>
+          </td>
+        </tr>
+        <tr *ngIf="students.length == 0" class="text-center">
+          <td colspan="4">No Data To Display</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
