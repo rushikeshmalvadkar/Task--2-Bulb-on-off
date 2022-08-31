@@ -1,9 +1,4 @@
-import { Component  } from '@angular/core';
-import { StudentService } from 'src/assets/student.service';
-import { ActivatedRoute, RouterModule, Router } from '@angular/router';
-
-
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,29 +6,18 @@ import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 })
 export class AppComponent {
 
-     buttonShow = true;
-    bulbShow = false;
-  constructor(private service : StudentService){
+  buttonShow = true;
+  bulbShow = false;
 
+  OnBulbOn() {
+    this.bulbShow = true;
+    this.buttonShow = false;
   }
 
-  ngOnInit(){
-
-
+  OnBulbOff() {
+    this.bulbShow = false;
+    this.buttonShow = true;
   }
-
-  bulbOn(){
-
-      this.bulbShow = true;
-     this. buttonShow=false;
-  }
-  bulbOff(){
-
-    this.bulbShow=false;
-    this.buttonShow=true;
-  }
-
-
 }
 
 

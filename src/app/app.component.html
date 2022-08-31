@@ -2,8 +2,8 @@
   <div class="row">
     <!--bulb ON/OFF  section - START-->
     <div class="col-md-6 form-group">
-      <button class="bulb-btn-on " (click)="bulbOn()" *ngIf="buttonShow">ON</button>
-      <button class="bulb-btn-off" (click)="bulbOff()" *ngIf="!buttonShow">OFF</button>
+      <button class="bulb-btn-on " (click)=" OnBulbOn() " *ngIf="buttonShow">ON</button>
+      <button class="bulb-btn-off" (click)="OnBulbOff()" *ngIf="!buttonShow">OFF</button>
     </div>
     <!--bulb ON/OFF  section - END-->
 
