@@ -1,4 +1,14 @@
-.add{
-  color:red;
-
+.bulb-btn-on {
+  background: green;
+  padding: 10px 29px;
+  color: white;
+  font-weight: bold;
+  border: 1px solid green;
+}
+.bulb-btn-off{
+  background:red;
+  padding: 10px 29px;
+  color: white;
+  font-weight: bold;
+  border: 1px solid green;
 }

@@ -1,10 +1,20 @@
-<div class="container">
-    <div>
-  <h1 class="bg-danger text-white text-center">Student Management System</h1>
-  </div>
-  <div>
-  <router-outlet></router-outlet>
-  </div>
+<div class="container  mt-3">
+  <div class="row">
+    <!--bulb ON/OFF  section - START-->
+    <div class="col-md-6 form-group">
+      <button class="bulb-btn-on " (click)="bulbOn()" *ngIf="buttonShow">ON</button>
+      <button class="bulb-btn-off" (click)="bulbOff()" *ngIf="!buttonShow">OFF</button>
+    </div>
+    <!--bulb ON/OFF  section - END-->
 
-
-</div>
+    <!--bulb Section - START-->
+    <div class="col-md-6">
+      <div *ngIf="bulbShow">
+        <i class="fas fa-lightbulb fa-10x"></i>
+      </div>
+      <div *ngIf="!bulbShow">
+        <i class="far fa-lightbulb  fa-10x"></i>
+      </div>
+    </div>
+    <!--bulb Section - END-->
+  </div>
